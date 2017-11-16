@@ -1,5 +1,5 @@
 FROM python:2.7.14-slim
-MAINTAINER Thomas Knox "tknox@umich.edu"
+MAINTAINER Chris Kretler "ckretler@umich.edu"
 
 RUN apt-get update -y
 
