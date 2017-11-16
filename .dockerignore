@@ -1,0 +1,7 @@
+# do not send to the build context
+# it can only end in tears!
+
+.git
+.gitignore
+*it
+
