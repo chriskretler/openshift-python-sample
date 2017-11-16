@@ -40,7 +40,7 @@ Please be sure to read the following warnings and considerations before running 
 
 ### Database configuration
 
-The sample application code and templates in this repository contain database connection settings and credentials that rely on being able to use sqlite.
+There is sample application code and templates in this repository for connecting to a sqlite database.  They have been commented out for the purposes of this demonstration.  Uncomment the sqlite volume and modify the views.py file to re-enable the database.
 
 ### Automatic test execution
 
