@@ -1,0 +1,10 @@
+#!/bin/bash
+
+COMMAND="sqlite3 db.sqlite3 'delete from welcome_pageview;'"
+echo "Running:"
+echo "  $COMMAND"
+
+RESULT=$(sqlite3 db.sqlite3 'delete from welcome_pageview;')
+echo -e "Result:"
+echo "  $RESULT"
+

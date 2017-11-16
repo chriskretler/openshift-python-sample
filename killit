@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker kill yokimbo &> /dev/null
+# docker stop yokimbo &> /dev/null
+docker rm yokimbo &> /dev/null

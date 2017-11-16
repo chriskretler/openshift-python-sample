@@ -1,0 +1,9 @@
+#!/bin/bash
+
+./killit
+
+docker run -d \
+    --name yokimbo \
+    -v $PWD/db.sqlite3:/app/db.sqlite3 \
+    -p 8000:8000 \
+    knoxilla/yokimbo:latest
