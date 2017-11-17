@@ -1,4 +1,4 @@
-FROM python:2.7.14-slim
+FROM python:2.7.14
 MAINTAINER Chris Kretler "ckretler@umich.edu"
 
 RUN apt-get update -y
