@@ -9,16 +9,24 @@ from .models import PageView
 # Create your views here.
 def index(request):
     hostname = os.getenv('HOSTNAME', 'unknown')
-#    PageView.objects.create(hostname=hostname)
 
     return render(request, 'welcome/index.html', {
         'hostname': hostname,
-#        'database': database.info(),
-#        'count': PageView.objects.count()
     })
 
 def basic_questions(request):
     return render(request, 'welcome/basic_questions.html')
+
+
+def folder(request):
+    file = open('/app/folder/file.txt', 'r')
+    value = file.read()
+    file.close()
+
+    return render(request, 'welcome/folder.html', {
+        'value': value,
+    })
+
 
 def headers(request):
     return render(request, 'welcome/headers.html', {
