@@ -9,10 +9,10 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-#RUN chown -R www-data:www-data /app
+RUN chown -R nobody /app
 
 EXPOSE 8000
 
-#USER www-data
+USER nobody
 
 CMD ["gunicorn", "-c", "guniconf", "wsgi:application"]
