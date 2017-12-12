@@ -9,10 +9,10 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-RUN chown -R nobody /app
+#RUN chown -R www-data /app
+#USER www-data
+RUN chmod +w -R wsgi.py ./welcome
 
 EXPOSE 8000
-
-USER nobody
 
 CMD ["gunicorn", "-c", "guniconf", "wsgi:application"]
