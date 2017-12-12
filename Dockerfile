@@ -11,7 +11,7 @@ RUN pip install -r requirements.txt
 
 #RUN chown -R www-data /app
 #USER www-data
-RUN chmod +w -R wsgi.py ./welcome
+RUN chmod go+w -R wsgi.py ./welcome
 
 EXPOSE 8000
 
