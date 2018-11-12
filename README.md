@@ -30,9 +30,9 @@ To run this project in your development machine, follow these steps:
 
 3. Run the docker image:
 
-    `docker run -it -p 8080:8080 django-ex`
+    `docker run -it -p 8000:8000 django-ex`
 
-5. Open your browser and go to http://127.0.0.1:8000, you will be greeted with a welcome page.
+4. Open your browser and go to http://127.0.0.1:8000, you will be greeted with a welcome page.
 
 
 ## Deploying to OpenShift
@@ -56,6 +56,7 @@ And you can see information about your deployment too:
 In the web console, the overview tab shows you a service, by default called "django-example", that encapsulates all pods running your Django application. You can access your application by browsing to the service's IP address and port.  You can determine these by running
 
     oc get svc
+    
 
 ## Logs
 
@@ -94,27 +95,3 @@ Here is how you would run a command in a pod specified by label:
         oc exec -p <pod-name> -it -- bash
 
 3. Finally, execute any command that you need and exit the shell.
-
-Related GitHub issues:
-1. https://github.com/GoogleCloudPlatform/kubernetes/issues/8876
-2. https://github.com/openshift/origin/issues/2001
-
-
-The wrapper script combines the steps above into one. You can use it like this:
-
-    ./run-in-container.sh ./manage.py migrate          # manually migrate the database
-                                                       # (done for you as part of the deployment process)
-    ./run-in-container.sh ./manage.py createsuperuser  # create a user to access Django Admin
-    ./run-in-container.sh ./manage.py shell            # open a Python shell in the context of your app
-
-If your Django pods are labeled with a name other than "django", you can use:
-
-    POD_NAME=name ./run-in-container.sh ./manage.py check
-
-If there is more than one replica, you can also specify a POD by index:
-
-    POD_INDEX=1 ./run-in-container.sh ./manage.py shell
-
-Or both together:
-
-    POD_NAME=django-example POD_INDEX=2 ./run-in-container.sh ./manage.py shell
