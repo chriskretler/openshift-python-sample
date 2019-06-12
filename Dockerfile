@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM python:3.7
 MAINTAINER Chris Kretler "ckretler@umich.edu"
 
 RUN apt-get update -y
