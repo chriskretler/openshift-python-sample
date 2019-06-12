@@ -1,3 +1,5 @@
+.DS_Store
+
 # Django
 db.sqlite3
 staticfiles/
