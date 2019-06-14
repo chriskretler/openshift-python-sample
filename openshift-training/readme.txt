@@ -1,0 +1,1 @@
+Mount file.txt as a secret or configmap at: /app/folder/
