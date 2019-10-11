@@ -1,5 +1,5 @@
 FROM python:3.7
-MAINTAINER Chris Kretler "ckretler@umich.edu"
+LABEL maintainer="ckretler@umich.edu"
 
 RUN apt-get update -y
 
