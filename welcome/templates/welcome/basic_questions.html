@@ -243,9 +243,17 @@ display: none;
 font-style: italic;
 }
 
-
-
 </style>
+
+<script>
+function showResults1() {
+   document.getElementById("result1").style = "display: block;"
+}
+
+function showResults2() {
+   document.getElementById("result2").style = "display: block;"
+}
+</script>
 
 </head>
 <body>
@@ -275,13 +283,11 @@ font-style: italic;
 				<input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Henry Tappan</label><br/>
 				</ul>
 				
-				<div id="results">
-					Submit
-				</div>
+				<button type="button" id="results1" onclick="showResults1()">Submit</button>
 				
-				<div id="category1">
-					<p>
-						<strong>Question 1:</strong> The correct answer is the 					<strong>Henry Tappan</strong>.
+				<div id="result1" style="display: none;">
+					<p style="margin-top: 2.5em;">
+						The correct answer is <strong>Henry Tappan</strong>.
 					</p>
 				</div>
 			</section>
@@ -292,9 +298,6 @@ font-style: italic;
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
               <h2>Question #2</h2>
-                <p>
-                  The University has a rich history of leadership.  Many of these leaders are commemorated in the names of buildings on campus.  The following question refers to the source of one of those names.
-                </p>
                 
                 <p class="question">  
                   Who was the second President of the University of Michigan?
@@ -307,13 +310,11 @@ font-style: italic;
 				<input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Henry Tappan</label><br/>
 				</ul>
 				
-				<div id="results">
-					Submit
-				</div>
+				<button type="button" id="results2" onclick="showResults2()">Submit</button>
 				
-				<div id="category1">
-					<p>
-						<strong>Question 2:</strong> The correct answer is the 					<strong>Erastus Haven</strong>.
+				<div id="result2" style="display: none;">
+					<p style="margin-top: 2.5em;">
+						The correct answer is <strong>Erastus Haven</strong>.
 					</p>
 				</div>
 			</section>
