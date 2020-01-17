@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8
 LABEL maintainer="ckretler@umich.edu"
 
 #RUN apt-get update -y
