@@ -15,4 +15,4 @@ RUN chmod g+r -R wsgi.py ./welcome
 
 EXPOSE 8000
 
-CMD ["gunicorn", "-c", "guniconf", "wsgi:application"]
+CMD ["gunicorn", "-c", "guniconf.py", "wsgi:application"]
