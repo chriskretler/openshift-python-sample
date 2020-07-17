@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  file.txt: yet another howdy!
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: sample-cm
