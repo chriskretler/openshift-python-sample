@@ -6,7 +6,7 @@ from welcome.views import index, health, headers, basic_questions, folder
 
 urlpatterns = [
     # Examples:
-    # url(r'^$', 'project.views.home', name='home'),
+    # url(r'^$', 'sample-app.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', index),
