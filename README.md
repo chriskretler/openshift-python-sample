@@ -30,7 +30,7 @@ To follow the next steps, you need to be logged in to an OpenShift cluster and h
 
 You can use the oc command like to create your application:
 
-`oc new-app https://github.com/chriskretler/openshift-python-sample.git`
+`oc new-app https://github.com/chriskretler/openshift-python-sample.git --context-dir=src`
 
 Your application will be built and deployed automatically. If that doesn't happen, you can debug your build:
 
