@@ -1,7 +1,7 @@
 FROM python:3.9-slim
 LABEL maintainer="ckretler@umich.edu"
 
-#RUN apt-get update -y
+ENV build-date 21jun2021
 
 WORKDIR /app
 
