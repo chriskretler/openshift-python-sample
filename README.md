@@ -15,7 +15,7 @@ To run this project in your development machine, follow these steps:
 
 2. Build the docker image:
 
-  `docker build -t django-ex .`
+  `docker build -t django-ex src/`
 
 3. Run the docker image:
 
