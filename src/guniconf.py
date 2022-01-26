@@ -7,7 +7,7 @@ workers = 3
 accesslog = '-'
 
 # log to to stderr - handy for docker
-# errorlog = '-'
+errorlog = '-'
 # loglevel = 'info'
 
 # default accesslog format
@@ -17,4 +17,7 @@ accesslog = '-'
 # access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(B)s %(L)s %({Host}i)s %({Content-Type}o)s'
 
 # accesslog simplified format, plus timing.
-access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s %(L)s'
+#access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s %(L)s'
+
+# provide X-Forwarded-For header for openshift deployments
+access_log_format = '%({X-Forwarded-For}i)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s %(L)s'
