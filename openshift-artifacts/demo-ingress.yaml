@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    # add an annotation indicating the issuer to use.
+    cert-manager.io/cluster-issuer: letsencrypt
+  name: demo-ingress
+spec:
+  rules:
+  - host: demo-app.aws.web.umich.edu
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: openshift-python-sample
+            port:
+              number: 8000
+  tls:
+  - hosts:
+    - demo-app.aws.web.umich.edu
+    secretName: demo-ingress-cert

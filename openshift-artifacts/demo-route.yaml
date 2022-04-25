@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    cert-utils-operator.redhat-cop.io/certs-from-secret: demo-route-secret
+  labels:
+    app: openshift-python-sample
+    app.kubernetes.io/component: openshift-python-sample
+    app.kubernetes.io/instance: openshift-python-sample
+  name: demo-route
+spec:
+  host: demo-app.aws.web.umich.edu
+  port:
+    targetPort: 8000-tcp
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: openshift-python-sample
+    weight: 100
+  wildcardPolicy: None

@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: demo-route-cert
+spec:
+  secretName: demo-route-secret
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  # The certificate will be valid for the following names (dnsNames will
+  # appear in the certificate's Subject Alternative Names field)
+  commonName: demo-app.aws.web.umich.edu
+  dnsNames:
+  - demo-app.aws.web.umich.edu
