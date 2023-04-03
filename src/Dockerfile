@@ -1,7 +1,7 @@
 FROM python:3.10-slim
 LABEL maintainer="ckretler@umich.edu"
 
-ENV build-date 21mar2023
+ENV build-date 3apr2023
 
 WORKDIR /app
 
