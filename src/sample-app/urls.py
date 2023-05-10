@@ -1,25 +1,17 @@
 from django.conf import settings
-from django.conf.urls import include, url
-from django.contrib import admin
-
+from django.urls import re_path, include
 from welcome.views import index, health, headers, basic_questions, folder
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'sample-app.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^$', index),
-    url(r'^basic_questions$', basic_questions),
-    url(r'^folder$', folder),
-    url(r'^health$', health),
-    url(r'^headers$', headers),
-    #url(r'^admin/', include(admin.site.urls)),
-    url(r'^admin/', admin.site.urls),
+    re_path(r'^$', index),
+    re_path(r'^basic_questions/', basic_questions),
+    re_path(r'^folder/', folder),
+    re_path(r'^health/', health),
+    re_path(r'^headers/', headers),
 ]
 
 if settings.DEBUG:
    import debug_toolbar
    urlpatterns = [
-       url(r'^__debug__/', include(debug_toolbar.urls)),
+       re_path(r'^debug/', include(debug_toolbar.urls)),
    ] + urlpatterns
