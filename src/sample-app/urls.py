@@ -9,9 +9,3 @@ urlpatterns = [
     re_path(r'^health/', health),
     re_path(r'^headers/', headers),
 ]
-
-if settings.DEBUG:
-   import debug_toolbar
-   urlpatterns = [
-       re_path(r'^debug/', include(debug_toolbar.urls)),
-   ] + urlpatterns
