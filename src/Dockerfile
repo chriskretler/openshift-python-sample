@@ -1,7 +1,7 @@
-FROM python:3.13-slim
+FROM python:3.13-alpine
 LABEL maintainer="ckretler@umich.edu"
 
-ENV build-date=06may2025
+ENV build-date=06june2025
 
 WORKDIR /app
 
@@ -9,7 +9,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
-#RUN chmod g+r -R sample-app/wsgi.py ./welcome
 
 EXPOSE 8000
 
