@@ -1,7 +1,7 @@
 FROM python:3.13-alpine
 LABEL maintainer="ckretler@umich.edu"
 
-ENV build-date=06june2025
+ENV build-date=05sep2025
 
 WORKDIR /app
 
